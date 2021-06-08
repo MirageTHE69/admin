@@ -1,5 +1,6 @@
 package com.example.admin.ui.adpater
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -19,7 +20,7 @@ class prouductAdpater(options: FirestoreRecyclerOptions<ProductModel>): Firestor
     class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
 
         val image  = itemView.findViewById<ImageView>(R.id.Product_img)
-        val productname = itemView.findViewById<TextView>(R.id.productname)
+        val productname = itemView.findViewById<TextView>(R.id.product_name)
         val productprice = itemView.findViewById<TextView>(R.id.product_price)
         val editbtn = itemView.findViewById<Button>(R.id.edit_btn)
         val deletebtn = itemView.findViewById<Button>(R.id.delete_btn)
@@ -41,14 +42,17 @@ class prouductAdpater(options: FirestoreRecyclerOptions<ProductModel>): Firestor
             model: ProductModel
     ) {
 
-//        val url: String? = model.image1;
-//        Glide.with(holder.image.context)
-//            .load(url)
-//            .placeholder(R.drawable.fui_ic_googleg_color_24dp)
-//            .into(holder.image)
+        val url: String? = model.product_image;
+        Glide.with(holder.image.context)
+            .load(url)
+            .placeholder(R.drawable.fui_ic_googleg_color_24dp)
+            .into(holder.image)
 
-        holder.productname?.text = model.productname
-        holder.productprice.text = model.productprice
+        holder.productname?.text = model.product_name
+        Log.d("name", "onBindViewHolder: "+model.product_name)
+
+
+        holder.productprice.text = model.product_rate
 
     }
 }
