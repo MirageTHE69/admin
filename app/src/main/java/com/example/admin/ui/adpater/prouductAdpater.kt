@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.admin.R
 import com.example.admin.Repo.model.ProductModel
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
@@ -39,6 +40,15 @@ class prouductAdpater(options: FirestoreRecyclerOptions<ProductModel>): Firestor
             position: Int,
             model: ProductModel
     ) {
-        TODO("Not yet implemented")
+
+//        val url: String? = model.image1;
+//        Glide.with(holder.image.context)
+//            .load(url)
+//            .placeholder(R.drawable.fui_ic_googleg_color_24dp)
+//            .into(holder.image)
+
+        holder.productname?.text = model.productname
+        holder.productprice.text = model.productprice
+
     }
 }

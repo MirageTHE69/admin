@@ -10,6 +10,10 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.admin.ui.adpater.OrderstatusAdpater
+import com.firebase.ui.firestore.FirestoreRecyclerOptions
+import com.google.firebase.firestore.DocumentReference
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
 
 
 class Orderstatus : Fragment() {
@@ -40,7 +44,14 @@ class Orderstatus : Fragment() {
         }
 
 
+
+
+
         recyclerView = view.findViewById<RecyclerView>(R.id.rcview3)
+
+
+
+
 
 //      recyclerView.adapter = adapter;
 //      recyclerView.layoutManager = LinearLayoutManager(activity)

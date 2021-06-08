@@ -12,6 +12,9 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.admin.ui.adpater.OrderAdpater
+import com.firebase.ui.firestore.FirestoreRecyclerOptions
+import com.google.firebase.firestore.DocumentReference
+import com.google.firebase.firestore.FirebaseFirestore
 
 
 class OrderList : Fragment() {
@@ -43,6 +46,9 @@ class OrderList : Fragment() {
 
 
         recyclerView = view.findViewById<RecyclerView>(R.id.rcview)
+
+
+
 
         return  view
 
