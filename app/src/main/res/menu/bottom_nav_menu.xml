@@ -2,15 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
         <item
-            android:id="@+id/person"
+            android:id="@+id/DashBoard"
             android:title="DashBoard"
             android:icon="@drawable/ic_baseline_home_24"/>
         <item
-            android:id="@+id/home"
+            android:id="@+id/Product_page"
             android:title="Products"
             android:icon="@drawable/ic_baseline_featured_play_list_24"/>
         <item
-            android:id="@+id/settings"
+            android:id="@+id/orderstatus"
             android:title="Status"
             android:icon="@drawable/ic_baseline_access_time_filled_24"/>
 

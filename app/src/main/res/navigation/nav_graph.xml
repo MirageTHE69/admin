@@ -3,15 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/orderList">
+    app:startDestination="@id/DashBoard">
 
     <fragment
-        android:id="@+id/orderList"
+        android:id="@+id/DashBoard"
         android:name="com.example.admin.OrderList"
         android:label="fragment_order_list"
-        tools:layout="@layout/fragment_order_list" />
+        tools:layout="@layout/fragment_order_list" >
+        <action
+            android:id="@+id/action_DashBoard_to_settings"
+            app:destination="@id/settings" />
+    </fragment>
     <fragment
-        android:id="@+id/product_List"
+        android:id="@+id/Product_page"
         android:name="com.example.admin.Product_List"
         android:label="fragment_product__list"
         tools:layout="@layout/fragment_product__list" />
@@ -19,5 +23,14 @@
         android:id="@+id/orderstatus"
         android:name="com.example.admin.Orderstatus"
         android:label="fragment_orderstatus"
-        tools:layout="@layout/fragment_orderstatus" />
+        tools:layout="@layout/fragment_orderstatus" >
+        <action
+            android:id="@+id/action_orderstatus_to_settings"
+            app:destination="@id/settings" />
+    </fragment>
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.example.admin.Settings"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
 </navigation>

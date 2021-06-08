@@ -42,6 +42,6 @@ class OrderAdpater(options: FirestoreRecyclerOptions<Ordermodel>): FirestoreRecy
             model: Ordermodel
     )
     {
-        TODO("Not yet implemented")
+
     }
 }

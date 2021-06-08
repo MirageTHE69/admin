@@ -3,16 +3,14 @@ package com.example.admin
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
-import com.google.android.material.bottomappbar.BottomAppBar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var bottomAppBar: BottomAppBar;
+    //lateinit var bottomAppBar: BottomAppBar;
     lateinit var bottomNavigationView: BottomNavigationView;
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,12 +28,12 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener {
                 _, destination, _ ->
             when (destination.id) {
-                R.id.orderList -> {
+                R.id.DashBoard -> {
                     showBottomNav()
 
                     hideTitleBar()
                 }
-                R.id.product_List -> {
+                R.id.Product_page -> {
                     showBottomNav()
                     hideTitleBar()
                 }
@@ -57,7 +55,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun showBottomNav() {
         bottomNavigationView.visibility = View.VISIBLE
-        bottomAppBar.visibility = View.VISIBLE
+        //bottomAppBar.visibility = View.VISIBLE
 
 
     }

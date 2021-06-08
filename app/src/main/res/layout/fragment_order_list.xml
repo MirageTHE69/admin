@@ -36,14 +36,15 @@
 
 
     <ImageView
+        android:id="@+id/setting"
         android:layout_width="38dp"
         android:layout_height="34dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/black"
         android:src="@drawable/ic_baseline_settings_24"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:backgroundTint="@color/black"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcview"
